@@ -11,7 +11,607 @@
 </head>
 <body>
 <x-dc>
+<helmet><!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;1,700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=DM+Serif+Display:ital,wght@0,400;1,400&family=Gilda+Display:wght@400&family=Gothic+A1:wght@300;400;500;600;700;800;900&family=Italiana:wght@400&family=Marcellus:wght@400&family=Playfair+Display:ital,wght@0,700;1,700&family=Prata:wght@400&family=Space+Mono:wght@400;700&display=swap">
+
+
+<script src="assets/js/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
 <helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* math */
+/* symbols */
+/* latin-ext */
+/* latin */
+/* math */
+/* symbols */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* latin */
+/* latin-ext */
+/* latin */
+/* cyrillic */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* vietnamese */
+/* latin */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+</style>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:#111;font-family:'Gothic A1',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  section{scroll-margin-top:70px}
+  .nav-link{transition:opacity .2s,color .2s;position:relative;padding:6px 2px}
+  .nav-link:hover{opacity:.55}
+  .nav-link.active{opacity:1;color:#ffa451}
+  .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:#ffa451;border-radius:2px}
+  #site-nav{transition:box-shadow .25s ease,padding .25s ease}
+  #site-nav.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .pill{transition:background .2s,color .2s,border-color .2s}
+  .pill:hover{background:#ffa451;color:#111;border-color:#ffa451}
+  .pill-lt:hover{background:#fff;color:#111;border-color:#fff}
+  .card:hover .card-img{transform:scale(1.03)}
+  .card-img{transition:transform .55s ease}
+  .card-link{transition:opacity .2s}
+  .svc{transition:border-color .2s}
+  .svc:hover{border-color:var(--pink,#ffa451)!important}
+  .treveal{opacity:1}
+  .treveal .ch{display:inline-block;opacity:0;transform:translateY(.85em);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .72s cubic-bezier(.34,1.56,.64,1)}
+  .treveal.in .ch{opacity:1;transform:none}
+  #rotator{display:inline-block;opacity:0;transform:translateY(.45em);transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.34,1.56,.64,1),color .3s ease}
+  #rotator.in{opacity:1;transform:none}
+  #rotator.out{opacity:0;transform:translateY(-.4em)}
+  @media (prefers-reduced-motion:reduce){.treveal .ch{opacity:1;transform:none;transition:none}}
+  .no-sb{scrollbar-width:none;-ms-overflow-style:none}
+  .no-sb::-webkit-scrollbar{display:none}
+  .card:hover .card-link{opacity:1}
+  details{border-top:1px solid rgba(255,255,255,.16)}
+  details:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
+  details summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.34,1.56,.64,1),padding-left .45s cubic-bezier(.34,1.56,.64,1)}
+  details summary:hover{transform:scale(1.03);padding-left:10px}
+  details summary::-webkit-details-marker{display:none}
+  .plus{transition:transform .28s;font-weight:400}
+  details[open] .plus{transform:rotate(45deg)}
+  .abody{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .3s,margin .3s}
+  details[open] .abody{max-height:160px;opacity:1;margin:0 0 24px}
+
+  /* ===== Hamburger (hidden on desktop) ===== */
+  .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;padding:0;background:none;border:none;cursor:pointer}
+  .hamburger span{display:block;width:100%;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ===== Mobile menu drawer (hidden on desktop) ===== */
+  .mobile-menu{position:fixed;top:0;right:0;height:100vh;width:min(78vw,320px);background:#0d0d0d;z-index:99;display:flex;flex-direction:column;gap:2px;padding:88px 28px 28px;transform:translateX(100%);transition:transform .3s ease;overflow-y:auto}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu-link{display:block;padding:14px 0;font:600 16px 'Gothic A1',sans-serif;text-transform:uppercase;letter-spacing:.02em;color:#fff;border-bottom:1px solid rgba(255,255,255,.1)}
+
+  /* ===== Mobile layout (down to 360px) ===== */
+  @media (max-width:768px){
+    .container{padding-left:20px!important;padding-right:20px!important}
+    .nav-inner{padding-top:12px!important;padding-bottom:12px!important}
+    .nav-links{display:none!important}
+    .hamburger{display:flex!important}
+    .presentation-grid{grid-template-columns:1fr!important;gap:28px!important}
+    .presentation-grid>div:first-child{margin:0 auto}
+    .section-header-grid{grid-template-columns:1fr!important;gap:14px!important;align-items:start!important;margin-bottom:36px!important}
+    .portfolio-grid{
+      display:flex!important;
+      grid-template-columns:none!important;
+      overflow-x:auto!important;
+      scroll-snap-type:x mandatory!important;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      border-left:none!important;
+    }
+    .portfolio-grid::-webkit-scrollbar{display:none}
+    .portfolio-grid .card{
+      flex:0 0 100%!important;
+      scroll-snap-align:center;
+    }
+    .portfolio-scroll-wrap{position:relative}
+    .scroll-arrow{
+      display:flex!important;
+      position:absolute;
+      top:38%;
+      right:26px;
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      background:#ffa451;
+      color:#111;
+      align-items:center;
+      justify-content:center;
+      font-size:16px;
+      pointer-events:none;
+      animation:scrollHint 1.4s ease-in-out infinite;
+      box-shadow:0 4px 14px rgba(0,0,0,.25);
+    }
+    .services-grid{grid-template-columns:1fr!important;gap:16px!important}
+    footer .container{flex-direction:column!important;text-align:center!important;gap:18px!important}
+  }
+  .scroll-arrow{display:none}
+  @keyframes scrollHint{
+    0%,100%{transform:translateX(0)}
+    50%{transform:translateX(6px)}
+  }
+  @media (max-width:420px){
+    .container{padding-left:16px!important;padding-right:16px!important}
+  }
+</style>
+</helmet>
+<div id="nav-spacer" style="height:66px"></div>
+<!-- ===== NAV ===== -->
+<div id="site-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;background:#ffffff;border-bottom:1px solid rgba(0,0,0,.06)">
+  <div class="container nav-inner" style="max-width:1200px;margin:0 auto;padding:14px 34px;display:flex;align-items:center;justify-content:space-between">
+    <a href="#accueil" style="display:flex;align-items:center"><img src="assets/icons/logo-header.svg" alt="Frames by Manon" style="height:28px;width:auto"></a>
+    <button id="nav-toggle" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" style="display:flex;align-items:center;gap:30px;font:600 13px 'Gothic A1',sans-serif;letter-spacing:.02em;text-transform:uppercase">
+      <a class="nav-link" href="#accueil">accueil</a>
+      <a class="nav-link" href="#presentation">à propos</a>
+      <a class="nav-link" href="#production">portfolio</a>
+      <a class="nav-link" href="#services">services</a>
+      <a class="nav-link" href="#process">process</a>
+      <a href="#contact" class="pill" style="display:inline-flex;align-items:center;height:36px;font:700 12px 'Space Mono',monospace;padding:0 20px;border:1px solid #111;border-radius:30px;text-transform:none;letter-spacing:.02em">Contact</a>
+      <span style="display:flex;gap:7px;margin-left:2px">
+        <span style="width:26px;height:26px;border-radius:50%;background:#111;display:inline-flex;align-items:center;justify-content:center;color:#fff;font:700 10px 'Space Mono',monospace">In</span>
+        <span style="width:26px;height:26px;border-radius:50%;background:#111;display:inline-flex;align-items:center;justify-content:center;color:#fff;font:700 10px 'Space Mono',monospace">Be</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MENU MOBILE ===== -->
+<div id="mobile-menu" class="mobile-menu">
+  <a class="mobile-menu-link" href="#accueil">accueil</a>
+  <a class="mobile-menu-link" href="#presentation">à propos</a>
+  <a class="mobile-menu-link" href="#production">portfolio</a>
+  <a class="mobile-menu-link" href="#services">services</a>
+  <a class="mobile-menu-link" href="#process">process</a>
+  <a class="mobile-menu-link" href="#contact" style="color:#ffa451">Contact</a>
+</div>
+
+<!-- ===== ACCUEIL / HERO (deux parties) ===== -->
+<section id="accueil" style="overflow:hidden">
+  <div style="position:relative;min-height:84vh;display:flex;align-items:center;justify-content:center;background:url(&quot;assets/images/hero-background.jpg&quot;) center/cover no-repeat;text-align:center">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,.45)"></div>
+    <div style="position:relative;z-index:1;padding:64px 34px;max-width:720px">
+      <h1 style="font:800 clamp(30px,4.5vw,62px)/.94 'Gothic A1',sans-serif;margin:0;letter-spacing:-.03em;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.55)"><span class="treveal">Studio créatif IA</span><br><span id="rotator" style="color:#ffa451">Sensible</span></h1>
+      <p style="font: 500 clamp(15px,1.4vw,18px)/1.6 'Gothic A1',sans-serif; margin: 28px 0 30px; white-space: nowrap; color: #f0f0f0; font-size: 15px; text-shadow:0 1px 10px rgba(0,0,0,.55)">L'IA comme extension de mon regard, pas comme substitut.</p>
+      <a href="#contact" class="pill" style="display:inline-flex;align-items:center;height:40px;font:700 13px 'Space Mono',monospace;padding:0 28px;border:1px solid #fff;border-radius:30px;color:#fff">Démarrer un projet</a>
+    </div>
+  </div>
+  <div style="background:var(--pink,#ffa451);border-top:1px solid rgba(0,0,0,.18);position:relative;overflow:hidden">
+    
+    <div class="container" style="max-width:1200px;margin:0 auto;padding:20px 34px;position:relative;z-index:1">
+      <p style="font:500 13.5px/1.6 'Space Mono',monospace;margin:0;color:#3a1f2a;text-align:center;text-transform:uppercase">Direction de création IA · Vidéo · Photo · Éditorial · Branding · Storytelling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRÉSENTATION ===== -->
+<section id="presentation" style="background:#fff;border-bottom:1px solid rgba(0,0,0,.08)">
+  <div class="container presentation-grid" style="max-width:1200px;margin:0 auto;padding:96px 34px 88px;display:grid;grid-template-columns:0.8fr 1.6fr;gap:56px;align-items:start">
+    <div>
+      <div style="aspect-ratio:3/4;max-width:260px;border-radius:0;background:var(--pink,#ffa451);display:flex;align-items:center;justify-content:center;font:400 11px 'Space Mono',monospace;color:#7a4256;position:relative;overflow:hidden"><span style="position:relative;z-index:1">portrait — Manon</span></div>
+    </div>
+    <div>
+      <h2 class="treveal" style="font:800 clamp(28px,4vw,52px)/.94 'Gothic A1',sans-serif;margin:0 0 26px;letter-spacing:-.03em">Bonjour,<br>moi c'est Manon.</h2>
+      <p style="font: 500 clamp(18px,2vw,24px)/1.5 'Gothic A1',sans-serif; margin: 0; max-width: 100%; font-size: 18px; width: 100%">Directrice artistique, je conçois des identités visuelles et des séries d'images à la croisée de la photographie, de la vidéo et de la génération par IA.</p>
+      <p style="font: 400 16px/1.75 'Gothic A1',sans-serif; color: #666; margin: 26px 0 0; max-width: 100%; font-size: 15px; width: 100%; position: static">Ma méthode : partir d'une intention forte, la traduire en système visuel cohérent, et la tenir sur toute la production. Une image maîtrisée, du concept au livrable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTION / THE WORK ===== -->
+<section id="production" style="background:#0d0d0d;color:#fff">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:96px 34px 40px">
+    <div class="section-header-grid" style="display:grid;grid-template-columns:1.7fr 1fr;gap:40px;align-items:end;margin-bottom:56px">
+      <h2 class="treveal" style="font:800 clamp(30px,4.5vw,62px)/.94 'Gothic A1',sans-serif;margin:0;letter-spacing:-.03em">Mon<br>portfolio.</h2>
+      <div style="padding-bottom:12px">
+        <p style="font:500 15px/1.6 'Gothic A1',sans-serif;margin:0;max-width:32ch;color:#cfcfcf">Une sélection de projets où chaque image répond à une intention claire.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container portfolio-scroll-wrap" style="max-width:1200px;margin:0 auto;padding:0 34px 84px">
+    <div class="portfolio-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)">
+      <a class="card" href="Projet.dc.html" style="display:block;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)">
+        <div style="position:relative;aspect-ratio:3/4;overflow:hidden">
+          <div class="card-img" style="width:100%;height:100%;background:url(&quot;assets/images/portfolio-1.jpg&quot;) center/cover no-repeat"></div>
+          <span style="position:absolute;top:14px;left:14px;font:700 10px 'Space Mono',monospace;letter-spacing:.06em;color:#111;background:#fff;padding:4px 9px;border-radius:20px">BIJOUX</span>
+        </div>
+        <div style="padding:16px 16px 22px">
+          <div style="font:700 15px/1.3 'Gothic A1',sans-serif;color:#fff;letter-spacing:-.01em">Athénais</div>
+          <p style="font:italic 400 12.5px/1.5 'Gothic A1',sans-serif;color:#a8a8b0;margin:8px 0 12px">Athénais voulait des images qui sentent l'été vécu pour mettre ses bijoux en lumière, sans shooting studio.</p>
+          <div style="font:400 11.5px/1.7 'Gothic A1',sans-serif;color:#cfcfd6">
+            <div>→ 8 visuels lifestyle été</div>
+            <div>→ 5 packshots fond neutre</div>
+            <div>→ formats prêts Instagram</div>
+          </div>
+          <div style="font:700 12px 'Gothic A1',sans-serif;color:#ffa451;margin-top:12px">Livré en 5 jours.</div>
+        </div>
+      </a>
+      <a class="card" href="Projet-Hydratis.dc.html" style="display:block;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)">
+        <div style="position:relative;aspect-ratio:3/4;overflow:hidden">
+          <video src="assets/video/portfolio-reel.mp4" autoplay="" muted="" loop="" playsinline="" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+          <span style="position:absolute;top:14px;left:14px;font:700 10px 'Space Mono',monospace;letter-spacing:.06em;color:#111;background:#fff;padding:4px 9px;border-radius:20px">COMPLÉMENTS</span>
+        </div>
+        <div style="padding:16px 16px 22px">
+          <div style="font:700 15px/1.3 'Gothic A1',sans-serif;color:#fff;letter-spacing:-.01em">Hydratis</div>
+          <p style="font:italic 400 12.5px/1.5 'Gothic A1',sans-serif;color:#a8a8b0;margin:8px 0 12px">Hydratis cherchait une vidéo produit percutante pour son lancement, sans mobiliser un plateau de tournage.</p>
+          <div style="font:400 11.5px/1.7 'Gothic A1',sans-serif;color:#cfcfd6">
+            <div>→ 1 vidéo produit 15s</div>
+            <div>→ 6 déclinaisons packshot</div>
+            <div>→ formats prêts réseaux</div>
+          </div>
+          <div style="font:700 12px 'Gothic A1',sans-serif;color:#ffa451;margin-top:12px">Livré en 48h.</div>
+        </div>
+      </a>
+      <a class="card" href="Projet-Video-Photo.dc.html" style="display:block;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)">
+        <div style="position:relative;aspect-ratio:3/4;overflow:hidden">
+          <div class="card-img" style="width:100%;height:100%;background:url(&quot;assets/images/portfolio-2.jpg&quot;) center/cover no-repeat"></div>
+          <span style="position:absolute;top:14px;left:14px;font:700 10px 'Space Mono',monospace;letter-spacing:.06em;color:#111;background:#fff;padding:4px 9px;border-radius:20px">ACCESSOIRES</span>
+        </div>
+        <div style="padding:16px 16px 22px">
+          <div style="font:700 15px/1.3 'Gothic A1',sans-serif;color:#fff;letter-spacing:-.01em">Nost-store</div>
+          <p style="font:italic 400 12.5px/1.5 'Gothic A1',sans-serif;color:#a8a8b0;margin:8px 0 12px">Une marque de lunettes cherchait à tester plusieurs directions créatives en parallèle, sans multiplier les shootings.</p>
+          <div style="font:400 11.5px/1.7 'Gothic A1',sans-serif;color:#cfcfd6">
+            <div>→ 10 packshots fond neutre</div>
+            <div>→ 6 visuels lifestyle ambiance</div>
+            <div>→ 12 formats prêts à diffuser</div>
+          </div>
+          <div style="font:700 12px 'Gothic A1',sans-serif;color:#ffa451;margin-top:12px">Livré en 48h.</div>
+        </div>
+      </a>
+      <a class="card" href="Projet-Branding.dc.html" style="display:block;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)">
+        <div style="position:relative;aspect-ratio:3/4;overflow:hidden">
+          <div class="card-img" style="width:100%;height:100%;background:url(&quot;assets/images/portfolio-3.jpg&quot;) center/cover no-repeat"></div>
+          <span style="position:absolute;top:14px;left:14px;font:700 10px 'Space Mono',monospace;letter-spacing:.06em;color:#111;background:#fff;padding:4px 9px;border-radius:20px">MAISON</span>
+        </div>
+        <div style="padding:16px 16px 22px">
+          <div style="font:700 15px/1.3 'Gothic A1',sans-serif;color:#fff;letter-spacing:-.01em">Maison Larah Antoine<br></div>
+          <p style="font:italic 400 12.5px/1.5 'Gothic A1',sans-serif;color:#a8a8b0;margin:8px 0 12px">Une marque de déco voulait une identité visuelle chaleureuse et cohérente pour habiller tous ses points de contact.</p>
+          <div style="font:400 11.5px/1.7 'Gothic A1',sans-serif;color:#cfcfd6">
+            <div>→ système visuel complet</div>
+            <div>→ 8 visuels d'ambiance</div>
+            <div>→ déclinaisons print &amp; web</div>
+          </div>
+          <div style="font:700 12px 'Gothic A1',sans-serif;color:#ffa451;margin-top:12px">Livré en 7 jours.</div>
+        </div>
+      </a>
+    </div>
+    <div class="scroll-arrow" aria-hidden="true">
+      <span>&#8594;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES (blanc) ===== -->
+<section id="services" style="background:#fff;color:#111;border-top:1px solid rgba(0,0,0,.08)">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:96px 34px 90px">
+    <div class="section-header-grid" style="display:grid;grid-template-columns:1.7fr 1fr;gap:40px;align-items:end;margin-bottom:56px">
+      <h2 class="treveal" style="font:800 clamp(30px,4.5vw,62px)/.94 'Gothic A1',sans-serif;margin:0;letter-spacing:-.03em">Mes<br>services.</h2><div style="padding-bottom:12px">
+        
+      <p style="font: 500 15px/1.6 'Gothic A1',sans-serif; margin: 0; max-width: 500px; color: #555">De la direction créative au livrable final un accompagnement clair, structuré, à la carte.</p></div>
+      
+    </div>
+    <div class="services-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div class="svc" style="border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:32px 28px 40px">
+        <div style="font:900 42px 'Gothic A1',sans-serif;color:var(--pink,#ffa451)">01</div>
+        <div style="font:700 23px 'Gothic A1',sans-serif;margin:18px 0 10px;letter-spacing:-.01em">Direction artistique</div>
+        <p style="font:400 14px/1.65 'Gothic A1',sans-serif;color:#666;margin:0">Je pose le cap créatif : références, système visuel, cohérence et je le tiens sur toute la production.</p>
+      </div>
+      <div class="svc" style="border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:32px 28px 40px">
+        <div style="font:900 42px 'Gothic A1',sans-serif;color:var(--pink,#ffa451)">02</div>
+        <div style="font:700 23px 'Gothic A1',sans-serif;margin:18px 0 10px;letter-spacing:-.01em">Création de campagne</div>
+        <p style="font:400 14px/1.65 'Gothic A1',sans-serif;color:#666;margin:0">Des campagnes pensées comme des histoires : un fil narratif clair, décliné avec justesse sur chaque point de contact.</p>
+      </div>
+      <div class="svc" style="border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:32px 28px 40px">
+        <div style="font:900 42px 'Gothic A1',sans-serif;color:var(--pink,#ffa451)">03</div>
+        <div style="font:700 23px 'Gothic A1',sans-serif;margin:18px 0 10px;letter-spacing:-.01em">Création vidéo &amp; photo</div>
+        <p style="font:400 14px/1.65 'Gothic A1',sans-serif;color:#666;margin:0">Films courts, motion et images fixes, entre prise de vue réelle et génération IA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS / THE METHOD (noir) ===== -->
+<section id="process" style="background:#0d0d0d;color:#fff">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:96px 34px 90px">
+    <div class="section-header-grid" style="display:grid;grid-template-columns:1.7fr 1fr;gap:40px;align-items:end;margin-bottom:60px">
+      <h2 class="treveal" style="font:800 clamp(30px,4.5vw,62px)/.94 'Gothic A1',sans-serif;margin:0;letter-spacing:-.03em;color:var(--pink,#ffa451)">Process<br>de travail.</h2>
+      <div style="padding-bottom:12px">
+        <p style="font:500 15px/1.6 'Gothic A1',sans-serif;margin:0;max-width:32ch;color:#cfcfcf">Une direction sur-mesure, pensée autour de vous et de vos projets.</p>
+      </div>
+    </div>
+    <div>
+      <details open="">
+        <summary><span style="font:700 clamp(20px,2.4vw,28px) 'Gothic A1',sans-serif">01 — Le brief</span><span class="plus" style="font-size:26px">+</span></summary>
+        <div class="abody"><p style="font:400 15px/1.7 'Gothic A1',sans-serif;color:#b7b7b7;max-width:60ch;margin:0">Écoute de la marque, le produit, ce qui doit être raconté. Pas de formulaire à cocher, une vraie conversation pour cerner ce qui compte vraiment.</p></div>
+      </details>
+      <details>
+        <summary><span style="font:700 clamp(20px,2.4vw,28px) 'Gothic A1',sans-serif">02 — La direction artistique</span><span class="plus" style="font-size:26px">+</span></summary>
+        <div class="abody"><p style="font:400 15px/1.7 'Gothic A1',sans-serif;color:#b7b7b7;max-width:60ch;margin:0">Construire le moodboard, poser la palette, la lumière, le ton, les références. L'univers visuel propre, la base sur laquelle on s'accorde avant de produire quoi que ce soit.</p></div>
+      </details>
+      <details>
+        <summary><span style="font:700 clamp(20px,2.4vw,28px) 'Gothic A1',sans-serif">03 — La production</span><span class="plus" style="font-size:26px">+</span></summary>
+        <div class="abody"><p style="font:400 15px/1.7 'Gothic A1',sans-serif;color:#b7b7b7;max-width:60ch;margin:0">Prise de vue et génération d'images, dirigées en temps réel comme un shooting.</p></div>
+      </details>
+      <details>
+        <summary><span style="font:700 clamp(20px,2.4vw,28px) 'Gothic A1',sans-serif">04 — Sélection &amp; retouche</span><span class="plus" style="font-size:26px">+</span></summary>
+        <div class="abody"><p style="font:400 15px/1.7 'Gothic A1',sans-serif;color:#b7b7b7;max-width:60ch;margin:0">Tri des meilleures prises, retouche et étalonnage.</p></div>
+      </details>
+      <details>
+        <summary><span style="font:700 clamp(20px,2.4vw,28px) 'Gothic A1',sans-serif">05 — La livraison</span><span class="plus" style="font-size:26px">+</span></summary>
+        <div class="abody"><p style="font:400 15px/1.7 'Gothic A1',sans-serif;color:#b7b7b7;max-width:60ch;margin:0">Remettre les fichiers finaux, dans les bons formats — Instagram, site, print. Prêts à être utilisés, sans étape supplémentaire.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA MAIL ===== -->
+<section id="contact" style="background:var(--pink,#ffa451);position:relative;overflow:hidden">
+  
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:110px 34px;text-align:center;position:relative;z-index:1">
+    <div style="font:700 12px 'Space Mono',monospace;letter-spacing:.1em;color:#111;margin-bottom:24px;text-transform:uppercase">échangeons autours d'un café / Th<span style="letter-spacing: 1.2px;">é</span></div>
+    <h2 class="treveal" style="font:800 clamp(30px,4.5vw,58px)/.96 'Gothic A1',sans-serif;margin:0 auto;letter-spacing:-.03em;max-width:15ch">Créons votre prochaine image.</h2>
+    <a href="https://calendly.com/framesbymanon" target="_blank" rel="noopener" class="pill" style="display:inline-flex;align-items:center;height:40px;margin-top:40px;font:700 14px 'Space Mono',monospace;padding:0 38px;border:1px solid #111;border-radius:34px">Je prends contact</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#0d0d0d;color:#fff">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:44px 34px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
+    <img src="assets/icons/logo-footer.svg" alt="Frames by Manon" style="height:32px;width:auto">
+    <div style="display:flex;gap:24px;font:500 13px 'Space Mono',monospace;color:#bdbdbd">
+      <a class="nav-link" href="mailto:Framesbymanon@gmail.com">Email</a>
+      <a class="nav-link" href="#">Instagram</a>
+      <a class="nav-link" href="#accueil">Haut ↑</a>
+    </div>
+    <div style="font:400 12px 'Space Mono',monospace;color:#666">© 2025 — Direction artistique IA</div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#ffa451&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#ffa451&quot;,&quot;#e8c95f&quot;,&quot;#a7d3c0&quot;,&quot;#c9b8f0&quot;]}}">
+class Component extends DCLogic {
+  applyVars() {
+    document.documentElement.style.setProperty('--pink', this.props.accentColor || '#ffa451');
+  }
+  splitLetters(el) {
+    const nodes = Array.from(el.childNodes);
+    el.innerHTML = '';
+    let i = 0;
+    const addWords = (text) => {
+      text.split(/(\s+)/).forEach((part) => {
+        if (part === '') return;
+        if (/^\s+$/.test(part)) { el.appendChild(document.createTextNode(' ')); return; }
+        const word = document.createElement('span');
+        word.style.display = 'inline-block';
+        word.style.whiteSpace = 'nowrap';
+        part.split('').forEach((ch) => {
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = ch;
+          s.style.transitionDelay = (i * 0.032) + 's';
+          word.appendChild(s);
+          i++;
+        });
+        el.appendChild(word);
+      });
+    };
+    nodes.forEach((n) => {
+      if (n.nodeName === 'BR') { el.appendChild(document.createElement('br')); }
+      else { addWords(n.textContent); }
+    });
+  }
+  initNavShadow() {
+    const nav = document.getElementById('site-nav');
+    if (!nav) return;
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+  initScrollSpy() {
+    const navLinks = Array.from(document.querySelectorAll('.nav-link')).filter((a) => a.getAttribute('href') && a.getAttribute('href').startsWith('#'));
+    const ids = navLinks.map((a) => a.getAttribute('href').slice(1));
+    const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+    const setActive = (id) => {
+      navLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    };
+    const onScroll = () => {
+      const y = window.scrollY + 90;
+      let current = sections[0] && sections[0].id;
+      sections.forEach((s) => { if (s.offsetTop <= y) current = s.id; });
+      setActive(current);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+  fixHashScroll() {
+    if (!location.hash) return;
+    const target = document.querySelector(location.hash);
+    if (!target) return;
+    const go = () => {
+      const y = target.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo(0, y);
+    };
+    go();
+    window.addEventListener('load', go);
+    setTimeout(go, 300);
+    setTimeout(go, 900);
+    setTimeout(go, 1800);
+  }
+  componentDidMount() {
+    this.applyVars();
+    this.fixHashScroll();
+    document.querySelectorAll('video').forEach((v) => { v.muted = true; v.volume = 0; });
+    this.initScrollSpy();
+    this.initNavShadow();
+    requestAnimationFrame(() => {
+      const els = document.querySelectorAll('.treveal');
+      els.forEach((el) => this.splitLetters(el));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.25 });
+      els.forEach((el) => io.observe(el));
+
+      const rot = document.getElementById('rotator');
+      if (rot) {
+        const words = ['Sensible', 'Cinématique', 'Chaleureux', 'Contemplatif', 'Lumineux', 'Précis', 'Vivant', 'Habité'];
+        const colors = ['#00b3c6', '#2f8f5f', '#c2410c', '#00a0c0', '#3a8f6e', '#d9822b', '#0097ab', '#4a7f3f'];
+        const fonts = ["'Cormorant Garamond',serif", "'Bodoni Moda',serif", "'Marcellus',serif", "'Playfair Display',serif", "'Prata',serif", "'Italiana',serif", "'Gilda Display',serif", "'DM Serif Display',serif"];
+        const styles = ['italic', 'normal', 'normal', 'italic', 'normal', 'normal', 'normal', 'italic'];
+        let i = 0;
+        const show = () => {
+          rot.textContent = words[i];
+          rot.style.color = colors[i % colors.length];
+          rot.style.fontFamily = fonts[i % fonts.length];
+          rot.style.fontStyle = styles[i % styles.length];
+          rot.classList.remove('out');
+          rot.classList.add('in');
+          setTimeout(() => { rot.classList.remove('in'); rot.classList.add('out'); }, 1700);
+          i = (i + 1) % words.length;
+        };
+        if (window.__ftrTimer) clearInterval(window.__ftrTimer);
+        show();
+        window.__ftrTimer = setInterval(show, 2100);
+      }
+    });
+  }
+  componentWillUnmount() { if (window.__ftrTimer) clearInterval(window.__ftrTimer); }
+  componentDidUpdate() { this.applyVars(); }
+  renderVals() {
+    const scroll = (dir) => {
+      const el = document.getElementById('pf-scroll');
+      if (el) el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' });
+    };
+    return { scrollLeft: () => scroll(-1), scrollRight: () => scroll(1) };
+  }
+}
+</script>
+
+
+<script>
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  function closeMenu() {
+    toggle.classList.remove('open');
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  function openMenu() {
+    toggle.classList.add('open');
+    menu.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  toggle.addEventListener('click', function () {
+    if (menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
+  });
+})();
+</script>
+</body></html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* math */
