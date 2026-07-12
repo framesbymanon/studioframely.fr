@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:#111;font-family:'Gothic A1',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .nav-link{transition:opacity .2s}
+  .nav-link:hover{opacity:.55}
+  .pill{transition:background .2s,color .2s,border-color .2s}
+  .pill:hover{background:#ffa451;color:#111;border-color:#ffa451}
+  .thumb:hover .thumb-img{transform:scale(1.03)}
+  .thumb-img{transition:transform .55s ease}
+	@media screen and (max-width: 767.98px) {
+		div[data-dc-tpl="10"]{
+			position:fixed;
+			top: 57px;
+			width:100%;
+			background-color:#fff;
+			display:block !important;
+			height: 100%;
+			padding: 14px 34px;
+			left:-100%;
+			transition: left .3s ease;
+		}
+		div[data-dc-tpl="10"].open{
+			left: 0;
+		}
+		.menu-mobile {
+			position: fixed;
+			top: 18px;
+			right: 34px;
+			font-size: 14px;
+			cursor: pointer;
+			z-index: 1000;
+			color: rgb(17, 17, 17);
+			font-weight: 600;
+		}
+		div[data-dc-tpl="10"] .nav-link{
+			width: 100%;
+			display: block;
+			font-size:14px;
+			margin-bottom:5px;
+			padding: 5px 0;
+		}
+		div[data-dc-tpl="10"] .pill{
+			font-size: 14px !important;
+		}
+		div[data-dc-tpl="10"] .nav-link:after{
+			display:none;
+		}
+		div[data-dc-tpl="19"]{
+		    display: block !important;
+
+		}
+		div[data-dc-tpl="25"]{
+		   column-count: 2 !important;
+
+		}
+		p[data-dc-tpl="23"]{
+		    font: 500 14px / 1.6 "Gothic A1", sans-serif !important;
+			margin-top: 15px !important;
+			}
+	}
+</style>
+</helmet>
+<div id="nav-spacer" style="height:66px"></div>
+<!-- ===== NAV ===== -->
+<div id="site-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;background:#ffffff;border-bottom:1px solid rgba(0,0,0,.06)">
+  <div style="max-width:1200px;margin:0 auto;padding:14px 34px;display:flex;align-items:center;justify-content:space-between">
+    <a href="Frames by Manon - Site.html#accueil" style="display:flex;align-items:center"><img src="assets/logo-nav.svg" alt="Frames by Manon" style="height:28px;width:auto"></a>
+    <div style="display:flex;align-items:center;gap:30px;font:600 13px 'Gothic A1',sans-serif;letter-spacing:.02em;text-transform:capitalize;">
+      <a class="nav-link" href="Frames by Manon - Site.html#accueil">Accueil</a>
+      <a class="nav-link" href="Frames by Manon - Site.html#presentation">À propos</a>
+      <a class="nav-link" href="Frames by Manon - Site.html#production">Portfolio</a>
+      <a class="nav-link" href="Frames by Manon - Site.html#services">Services</a>
+      <a class="nav-link" href="Frames by Manon - Site.html#process">Process</a>
+      <a href="Frames by Manon - Site.html#contact" class="pill" style="display:inline-flex;align-items:center;height:36px;font:700 12px 'Space Mono',monospace;padding:0 20px;border:1px solid #111;border-radius:30px;text-transform:none;letter-spacing:.02em">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FIL D'ARIANE + TITRE ===== -->
+<section style="max-width:1200px;margin:0 auto;padding:56px 34px 40px">
+  <a href="Frames by Manon - Site.html#production" class="nav-link" style="font:700 12px 'Space Mono',monospace;color:#888;letter-spacing:.04em">← Retour au portfolio</a>
+  <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:44px;align-items:end;margin-top:34px">
+    <div>
+      <h1 style="font:800 clamp(30px,4.5vw,62px)/.94 'Gothic A1',sans-serif;margin:0;letter-spacing:-.03em">Hydratis</h1>
+    </div>
+    <div style="padding-bottom:10px">
+      <p style="font:500 17px/1.6 'Gothic A1',sans-serif;margin:0;color:#444">Hydratis cherchait une vidéo produit percutante pour son lancement, sans mobiliser un plateau de tournage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISUELS MASONRY ===== -->
+<section style="max-width:1200px;margin:0 auto;padding:0 34px 24px">
+  <div style="column-count:3;column-gap:22px">
+    <div style="break-inside:avoid;margin:0 0 22px;overflow:hidden"><video src="assets/portfolio-2.mp4" autoplay muted loop playsinline style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block"></video></div>
+    <div style="break-inside:avoid;margin:0 0 22px;overflow:hidden"><div style="aspect-ratio:3/4;background:url('assets/hydratis-1.jpg') center/cover no-repeat"></div></div>
+    <div style="break-inside:avoid;margin:0 0 22px;overflow:hidden"><div style="aspect-ratio:3/4;background:url('assets/hydratis-2.jpg') center/cover no-repeat"></div></div>
+  </div>
+</section>
+
+
+
+<!-- ===== META / CRÉDITS ===== -->
+
+
+<footer style="background:#0d0d0d;color:#fff">
+  <div style="max-width:1200px;margin:0 auto;padding:40px 34px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
+    <a href="Frames by Manon - Site.html" style="font:800 17px 'Gothic A1',sans-serif"><img src="assets/logo-footer.svg" alt="Frames by Manon" style="height:32px;width:auto"></a>
+    <div style="font:400 12px 'Space Mono',monospace;color:#666">© 2026 — Direction artistique IA</div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    document.documentElement.style.setProperty('--pink', '#ffa451');
+  }
+  renderVals() { return {}; }
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Création du bouton menu
+    const btn = document.createElement("span");
+    btn.className = "menu-mobile";
+     btn.innerHTML = "&#9776;"; // ☰
+
+    document.body.appendChild(btn);
+
+    
+
+    btn.addEventListener("click", () => {
+	const menu = document.querySelector("div[data-dc-tpl='10']");
+        menu.classList.toggle("open");
+    });
+setTimeout(function(){
+		document.querySelectorAll("div[data-dc-tpl='10'] a").forEach(link => {
+			link.addEventListener("click", () => {
+				document.querySelector("div[data-dc-tpl='10']").classList.remove("open");
+			});
+		});
+	},200);
+});
+</script>
+</body>
+</html>
